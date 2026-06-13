@@ -38,10 +38,19 @@ align-items:center;
 padding:15px;
 }
 
-.logo{
-color:white;
-font-size:1.5rem;
-font-weight:700;
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
 }
 
 nav ul{
@@ -55,25 +64,46 @@ color:white;
 text-decoration:none;
 }
 
-.hero{
-height:90vh;
-background:url('../images/station.jpg') center/cover;
-display:flex;
-align-items:center;
-justify-content:center;
+.hero {
+    position: relative;
+    min-height: 85vh;
+    background-image: 
+                      url("/images/station71.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 40px 20px;
 }
 
-.overlay{
-background:rgba(0,0,0,.55);
-width:100%;
-height:100%;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-color:white;
-text-align:center;
-padding:20px;
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(0,0,0,0.55),
+        rgba(120,0,0,0.45)
+    );
+    z-index: 1;
+}
+
+.overlay {
+    position: relative;
+    z-index: 2;
+    background: transparent;
+    width: min(1100px, 92%);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
 
 .hero h1{
@@ -101,6 +131,85 @@ margin:auto;
 text-align:center;
 }
 
+.about-section {
+    background: white;
+}
+
+.about-intro {
+    max-width: 850px;
+    margin: 0 auto 35px;
+    font-size: 1.1rem;
+}
+
+.about-cards {
+    max-width: 1200px;
+    margin: 35px auto 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.about-card {
+    position: relative;
+    min-height: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+    display: flex;
+    align-items: flex-end;
+}
+
+.about-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.72) 0%,
+        rgba(0,0,0,0.35) 35%,
+        rgba(0,0,0,0) 75%
+    );
+    z-index: 1;
+}
+
+.about-card-content {
+    position: relative;
+    z-index: 2;
+    padding: 24px;
+    color: white;
+    text-align: left;
+    width: 100%;
+}
+
+.about-card h3 {
+    color: white;
+    font-size: 1.35rem;
+    margin-bottom: 8px;
+}
+
+.about-card p {
+    color: #f1f1f1;
+    font-size: 0.95rem;
+}
+
+.fire-suppression {
+    background-image: url("/images/fire-suppression.jpg");
+}
+
+.rescue-operations {
+    background-image: url("/images/rescue-operations.jpg");
+}
+
+.emergency-response {
+    background-image: url("/images/emergency-response.jpg");
+}
+
+.public-education {
+    background-image: url("/images/public-education.jpg");
+}
 .stats{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
@@ -117,26 +226,153 @@ color:#c60000;
 font-size:2rem;
 }
 
+.call-totals {
+    background: #111;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.call-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.call-totals h2 {
+    font-size: 2.3rem;
+    margin-bottom: 15px;
+}
+
+.call-intro {
+    max-width: 850px;
+    margin: 0 auto 35px;
+    color: #ddd;
+    font-size: 1.05rem;
+}
+
+.call-total-highlight {
+    background: #c60000;
+    color: white;
+    max-width: 420px;
+    margin: 0 auto 35px;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.25);
+}
+
+.call-total-highlight h3 {
+    font-size: 3rem;
+    margin-bottom: 5px;
+}
+
+.call-total-highlight p {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.call-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.call-card {
+    background: #1f1f1f;
+    padding: 30px 20px;
+    border-radius: 12px;
+    border-top: 4px solid #c60000;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.2);
+}
+
+.call-card h3 {
+    color: #ff3333;
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+}
+
+.call-card p {
+    color: #f1f1f1;
+    font-weight: 600;
+}
+
+.call-note {
+    margin-top: 30px;
+    color: #bbb;
+    font-size: 0.9rem;
+}
+
 .apparatus{
 padding:80px 20px;
 text-align:center;
 }
 
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-margin-top:30px;
-max-width:1200px;
-margin-left:auto;
-margin-right:auto;
+.cards {
+    max-width: 1200px;
+    margin: 30px auto 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
 }
 
-.card{
-background:white;
-padding:30px;
-border-radius:10px;
-box-shadow:0 0 15px rgba(0,0,0,.1);
+.card {
+    position: relative;
+    min-height: 320px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+    display: flex;
+    align-items: flex-end;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.65) 0%,
+        rgba(0,0,0,0.25) 30%,
+        rgba(0,0,0,0) 65%
+    );
+    z-index: 1;
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+    padding: 24px;
+    color: white;
+    text-align: left;
+    width: 100%;
+}
+
+.card h3 {
+    color: white;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: #f1f1f1;
+    font-size: 0.95rem;
+}
+
+.fleet-engine {
+    background-image: url("/images/Engine711.jpg");
+}
+
+.fleet-tanker {
+    background-image: url("/images/Tanker515.jpg");
+}
+
+.fleet-rescue {
+    background-image: url("/images/Rescue71.jpg");
+}
+
+.fleet-squad {
+    background-image: url("/images/Squad71.jpg");
 }
 
 .volunteer{
@@ -174,27 +410,53 @@ border:none;
 cursor:pointer;
 }
 
-footer{
-background:#111;
-color:white;
-text-align:center;
-padding:20px;
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
 }
 
-@media(max-width:768px){
-
-.hero h1{
-font-size:2.4rem;
+.footer-facebook {
+    display: inline-block;
+    margin-top: 12px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
 }
 
-nav{
-flex-direction:column;
-gap:15px;
+.footer-facebook:hover {
+    color: #ff3333;
 }
 
-nav ul{
-flex-wrap:wrap;
-justify-content:center;
+@media (max-width: 900px) {
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
+@media (max-width: 650px) {
+    nav {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .stats,
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 75vh;
+    }
 }

@@ -18,12 +18,16 @@
 
 <header>
     <nav>
-        <div class="logo">🚒 RRFD</div>
+       <div class="logo">
+    <img src="/images/71patch.jpg" alt="Rockwell Rural Fire Department Patch">
+    <span>The Rural</span>
+</div>
 
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#stats">Statistics</a></li>
+            <li><a href="#call-totals">Call Totals</a></li>
             <li><a href="#volunteer">Volunteer</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -45,16 +49,46 @@
     </div>
 </section>
 
-<section id="about" class="section">
+<section id="about" class="section about-section">
     <div class="container">
 
         <h2>About Our Department</h2>
 
-        <p>
-            Rockwell Rural Fire Department proudly provides fire suppression,
-            rescue operations, emergency response, and public safety education
-            throughout our district.
+        <p class="about-intro">
+            
         </p>
+
+        <div class="about-cards">
+
+            <div class="about-card fire-suppression">
+                <div class="about-card-content">
+                    <h3>Fire Suppression</h3>
+                    <p>Responding to structure fires, vehicle fires, and emergency fire incidents throughout the district.</p>
+                </div>
+            </div>
+
+            <div class="about-card rescue-operations">
+                <div class="about-card-content">
+                    <h3>Rescue Operations</h3>
+                    <p>Providing rescue support, vehicle extrication, and emergency assistance when the community needs it most.</p>
+                </div>
+            </div>
+
+            <div class="about-card emergency-response">
+                <div class="about-card-content">
+                    <h3>Emergency Response</h3>
+                    <p>Ready to respond 24/7 to emergencies, medical calls, accidents, and public safety needs.</p>
+                </div>
+            </div>
+
+            <div class="about-card public-education">
+                <div class="about-card-content">
+                    <h3>Public Safety Education</h3>
+                    <p>Helping educate the community through fire prevention, safety awareness, and public outreach.</p>
+                </div>
+            </div>
+
+        </div>
 
     </div>
 </section>
@@ -88,49 +122,101 @@
 
 </section>
 
+<section id="call-totals" class="call-totals">
+
+    <div class="call-container">
+
+        <h2>Call Totals</h2>
+
+        <p class="call-intro">
+            Rockwell Rural Fire Department responds to a wide range of emergency calls throughout the year.
+            Below is a snapshot of our recent response activity.
+        </p>
+
+        <div class="call-total-highlight">
+            <h3>510</h3>
+            <p>Total Calls This Year</p>
+        </div>
+
+        <div class="call-grid">
+
+            <div class="call-card">
+                <h3>126</h3>
+                <p>Fire Related Calls</p>
+            </div>
+
+            <div class="call-card">
+                <h3>310</h3>
+                <p>Medical Responses</p>
+            </div>
+
+            <div class="call-card">
+                <h3>75</h3>
+                <p>Motor Vehicle Accidents</p>
+            </div>
+
+        </div>
+
+        <p class="call-note">
+            Call totals are updated periodically and may vary based on reporting periods.
+        </p>
+
+    </div>
+
+</section>
+
 <section class="apparatus">
 
-<h2>Our Fleet</h2>
+    <h2>Our Fleet</h2>
 
-<div class="cards">
+    <div class="cards">
 
-<div class="card">
-<h3>Engine 711</h3>
-<p>Primary structure fire response unit.</p>
-</div>
+        <div class="card fleet-engine">
+            <div class="card-content">
+                <h3>Engine 711</h3>
+                <p>Primary structure fire response unit.</p>
+            </div>
+        </div>
 
-<div class="card">
-<h3>Tanker 515</h3>
-<p>Water supply operations.</p>
-</div>
+        <div class="card fleet-tanker">
+            <div class="card-content">
+                <h3>Tanker 515</h3>
+                <p>Water supply operations.</p>
+            </div>
+        </div>
 
-<div class="card">
-<h3>Rescue 71</h3>
-<p>Vehicle extrication and rescue response.</p>
-</div>
+        <div class="card fleet-rescue">
+            <div class="card-content">
+                <h3>Rescue 71</h3>
+                <p>Vehicle extrication and rescue response.</p>
+            </div>
+        </div>
 
-<div class="card">
-<h3>Squad 71</h3>
-<p>Medical call response and fire suppression.</p>
-</div>
-    
+        <div class="card fleet-squad">
+            <div class="card-content">
+                <h3>Squad 71</h3>
+                <p>Medical call response and fire suppression.</p>
+            </div>
+        </div>
 
-</div>
+    </div>
 
 </section>
 
 <section id="volunteer" class="volunteer">
 
-<h2>Join Our Team</h2>
+    <h2>Join Our Team</h2>
 
-<p>
-Serve your community as a volunteer firefighter.
-Training provided.
-</p>
+    <p>
+        Serve your community as a volunteer firefighter.<br>
+        Training provided.
+    </p>
 
-<a href="#contact" class="btn">
-Apply Today
-</a>
+    <div style="margin-top: 30px;">
+        <a href="#contact" class="btn">
+            Apply Today
+        </a>
+    </div>
 
 </section>
 
@@ -155,11 +241,12 @@ Send Message
 </section>
 
 <footer>
-<p>
-© 2026 Rockwell Rural Fire Department
-</p>
-</footer>
+    <p>© 2026 Rockwell Rural Fire Department</p>
 
+    <a href="https://www.facebook.com/rockwell.rural.2025" target="_blank" class="footer-facebook">
+        Follow us on Facebook
+    </a>
+</footer>
 <script src="js/script.js"></script>
 
 </body>
